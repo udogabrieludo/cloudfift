@@ -27,7 +27,7 @@ display:flex;
 justify-content:space-between;
 align-items: center;
 width: 100%;
-
+z-index:1;
 `
 
 export const Logo = styled.img`
@@ -37,6 +37,9 @@ export const Logo = styled.img`
 export const Links = styled.div`
 display: flex;
 gap:15px;
+@media (max-width:800px){
+  display:none;
+}
 
 `;
 
@@ -49,6 +52,9 @@ export const Link = styled(RouterLink)`
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 5px;
+  @media (max-width:800px){
+  display:none;
+}
 
 `;
 export const Button = styled.button`
@@ -58,6 +64,16 @@ export const Button = styled.button`
  color: ${({color})=>color? color : Colors.dark};
  border:none;
  padding: 5px 20px;
+ cursor: pointer;
 
 
 `;
+export const BuggerMenu = styled.div`
+
+  display:none;
+
+@media (max-width:800px){
+  display:flex;
+  cursor: pointer;
+}
+`

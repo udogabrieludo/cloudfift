@@ -1,30 +1,43 @@
 import React from 'react';
 import Header from '../components/header';
 import Menu from '../components/menu';
-import heroImage from '../assets/images/hero-image.svg'
+import HeaderContainer from '../container/header-container';
+import JobContainer from '../container/jobs-container';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { responsive } from '../features/slider-responsive';
+import { joblist } from '../features/joblist';
+import Card from '../components/card';
+import HowItWorks from '../container/how-it-works-container';
+
 
 
 const Home = () => {
   return (
-    <Header>
-          <Menu  />
-        
-          <div style={{display: 'flex', justifyContent:'space-between',alignItems:'center', padding:"0 8rem" }}>
-                <div style={{width:'50%', flex:'1'}}>
-                <h1>
-                Find a job easily
-                </h1>
-                <p>
-                With verified, up-to-date job listings directly from employer websites, we create a premium experience for job seekers, employers, and data seekers alike.
-                </p>
-                </div>
-                <div  style={{width:'50%', flex:'1'}}>
-                    <img src={heroImage}  alt='' style={{height:'500px', borderRadius:'20px'}}  />
+    <>
+     <Header>    
+      <Menu  />
+      <HeaderContainer  />
+      </Header>
+     <JobContainer />
 
-                </div>
-            </div>
-          
-    </Header>
+      {/* <div>
+      <Carousel responsive={responsive} swipeable={false}
+      partialVisible={true}        
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        ssr={true}>
+        {joblist.map((job, i)=>(
+          <div key={i}>
+            {job.companyName}
+          </div>
+        ))}
+      </Carousel>
+      </div> */}
+     <HowItWorks  />
+     
+    
+    </>
+    
   )
 };
 

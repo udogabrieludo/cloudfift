@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container,Nav,Logo, Links,Link, ButtonGroup, Button, Row} from './styles/menu';
+import { Container,Nav,Logo, Links,Link, ButtonGroup, Button, Row,BuggerMenu} from './styles/menu';
 import logo from '../../assets/images/logo.svg'
 import {Colors} from  '../../assets/theme'
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 const Menu = () => {
@@ -9,10 +10,12 @@ const Menu = () => {
       <Container>
            <Row>
            <Nav>      
-               <Logo src={logo} alt='logo' />
+              <Link to='/home'>
+              <Logo src={logo} alt='logo' />
+              </Link>
               
                <Links>
-                  <Link to='/'>
+                  <Link to='/home'>
                   Companies
                   </Link>
                   <Link  to='/'>
@@ -38,6 +41,9 @@ const Menu = () => {
                         Log In
                     </Button>
                 </ButtonGroup>
+                <BuggerMenu>
+                    <GiHamburgerMenu color={Colors.primary} size={30}/>
+                </BuggerMenu>
               
            </Nav>
            </Row>
