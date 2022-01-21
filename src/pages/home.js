@@ -9,6 +9,7 @@ import { responsive } from '../features/slider-responsive';
 import { joblist } from '../features/joblist';
 import Card from '../components/card';
 import HowItWorks from '../container/how-it-works-container';
+import CategoryContainer from '../container/category-container';
 
 
 
@@ -34,6 +35,7 @@ const Home = () => {
       </Carousel>
       </div> */}
      <HowItWorks  />
+     <CategoryContainer />
      
     
     </>
