@@ -14,7 +14,19 @@ border: 1px solid #E5E5E5;
 box-sizing: border-box;
 border-radius: 10px;
 padding: 3rem 0;
-margin: 1rem 0;
+@media(max-width: 800px) {
+    flex: 0 0 31%;
+    max-width: 31%;
+}
+@media(max-width: 640px) {
+    flex: 0 0 48%;
+    max-width: 48%;
+}
+@media(max-width: 480px) {
+    flex: 100%;
+    max-width: 100%;
+}
+
 `
 
 export const CardHeader = styled.div``

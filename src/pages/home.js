@@ -10,6 +10,10 @@ import { joblist } from '../features/joblist';
 import Card from '../components/card';
 import HowItWorks from '../container/how-it-works-container';
 import CategoryContainer from '../container/category-container';
+import TopJobs from '../components/top-jobs/top-jobs';
+import GetStart from '../components/get-started';
+import Footer from '../components/footer';
+
 
 
 
@@ -36,8 +40,10 @@ const Home = () => {
       </div> */}
      <HowItWorks  />
      <CategoryContainer />
-     
-    
+      <TopJobs />
+      <GetStart />
+       <Footer />
+      
     </>
     
   )

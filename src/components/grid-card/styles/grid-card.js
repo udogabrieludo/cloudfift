@@ -3,36 +3,46 @@ import { Colors } from '../../../assets/theme'
 
 
 export const Container = styled.div`
-width: 100%;
+padding: 0 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
 `
 export const Row = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr ;
-width: 100%;
-margin:auto;
+display: flex;
+align-items: center;
 max-width:1200px;
-grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+width: 100%;
+justify-content:'center';
+
+@media (max-width:800px){
+    flex-direction:column;
+  }
 
 `
 
 export const Column = styled.div`
+width:50%;
 
 &:last-of-type{
-  margin-left: 5rem;
-  padding: 0 2rem;
-  @media (max-width:640px){
-    margin-left: 0;
+  padding: 0 5rem;
+  @media (max-width:800px){
+    padding: 0
   }
   ;
 }
+@media (max-width:800px){
+    width:100%;
+  }
 
 `
 export const CardWrapper = styled.div`
 
+
+
 display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 30px;
-grid-auto-rows: minmax(100px, auto);
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-gap: 2rem;
 
 `
 
@@ -46,6 +56,11 @@ box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
 -webkit-box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
 -moz-box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
 
+@media (max-width:540px){
+  grid-column: 1/3;
+    grid-row: 1/ 3;
+}
+
 `
 export const CardTwo = styled.div`
 grid-column: 2 / 3;
@@ -56,6 +71,10 @@ border-radius:20px;
 box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
 -webkit-box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
 -moz-box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
+@media (max-width:540px){
+  grid-column: 1/3;
+    grid-row: 3/ 4;
+}
 
 `
 
@@ -69,12 +88,18 @@ border-radius:20px;
 box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
 -webkit-box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
 -moz-box-shadow: 10px 10px 21px 0px rgba(212,206,206,0.75);
+@media (max-width:540px){
+  grid-column: 1/3;
+    grid-row: 4/ 5;
+}
 
 `;
 
 
 
 export const Image = styled.img`
+width: 100%;
+height: auto;
 
 
 `;

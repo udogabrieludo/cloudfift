@@ -12,17 +12,18 @@ const CategoryContainer = () => {
            alignItems:'center', 
            width:'100%', 
            flexDirection: 'column',
-           maxWidth:'1200px'
+           maxWidth:'1200px',
+           padding:' 5rem 0'
            }}>
                <h1>Popular Categories</h1>
             <div style={{
             display: 'flex',
-           justifyContent:'space-between', 
+            gap:'20px',
            flexWrap:'wrap', width:'100%', 
           
            }}>
-                {Categories.map((item)=>(
-                    <Card  item={item}  /> 
+                {Categories.map((item, i)=>(
+                    <Card key={i} item={item}  /> 
                 ))}
             </div>
            
