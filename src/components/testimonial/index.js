@@ -4,6 +4,8 @@ import { Container, Row, Inner, Title, ImageBox, Content} from './styles/testimo
 import client from '../../assets/images/client.svg'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Button, CustomArrow } from '../../container/carousel';
+import {HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
 const Testimonial = () => {
 
@@ -28,6 +30,17 @@ const Testimonial = () => {
           partialVisibilityGutter: 15
         }
       };
+
+      const goLeft = ()=>{
+
+        Carousel.next()
+      }
+      
+      const goRight = ()=>{
+        Carousel.previous()
+    
+      }
+    
     
   return (
       <Container>
@@ -43,10 +56,15 @@ const Testimonial = () => {
                ssr={true}>
         
            <Inner>
+              
               <ImageBox>
               <FancyCard height='300px' size='300px' maxWidth='250px' width='300px' image={client} />
               </ImageBox>
               <Content>
+              <CustomArrow>
+              <Button  onClick={() =>{goLeft()}}><HiOutlineArrowNarrowLeft  size={35}/></Button>
+              <Button onClick={() => {goRight()}}><HiOutlineArrowNarrowRight size={35} /></Button>
+              </CustomArrow>
                  <p>The platform is really convenient to reach out to companies & I have managed to secure 2 interviews already! I can also track my application status instead of wondering whether the company has seen or shortlisted me</p>
                  <h4><strong>Irma Black</strong> </h4> 
                   <p>
@@ -55,7 +73,7 @@ const Testimonial = () => {
 
                </Content>
              </Inner>
-      </Carousel> 
+          </Carousel> 
              
              
              

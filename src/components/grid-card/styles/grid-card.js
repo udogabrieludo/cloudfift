@@ -104,7 +104,7 @@ height: auto;
 
 `;
 export const Footer = styled.div`
-padding: 1.5rem .5rem;
+padding: 1.5rem .4rem;
 
 `;
 export const Text = styled.p`

@@ -4,7 +4,6 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const CarouselCard = ({item}) => {
 
-    console.log('Item', item)
   return (
     <Container>
     <CardHeader>
