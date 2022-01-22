@@ -4,6 +4,7 @@ export const Colors = {
     light:'#f3fbf4',
     white:"#ffffff",
     dark:"#3f403f",
-    lightGray:'#d3d3d3',
+    lightGray:'#d3d3d3d1',
+    gray:'#b9b8b8',
     gradient:'rgba(43, 48, 58, 0.6)'
 }

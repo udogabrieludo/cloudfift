@@ -10,6 +10,7 @@ margin: 4rem 0;
 
 @media (max-width:640px){
  padding: 0;
+ margin:0;
 }
 
 `

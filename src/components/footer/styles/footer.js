@@ -63,8 +63,8 @@ max-width: 20%;
     max-width: 35%;
 }
 @media (max-width:640px){
-flex: 0 0 45%;
-max-width: 45%;
+flex: 0 0 48%;
+max-width: 48%;
 }
 
 `
@@ -86,6 +86,9 @@ export const Link = styled(RouterLink)`
 text-decoration: none;
 padding:.7rem 0;
 color: ${Colors.dark};
+@media (max-width:640px){
+    padding:.5rem 0;  
+}
 `
 export const IconBox = styled.div`
 display: flex;
@@ -101,6 +104,9 @@ export const SocialLinks = styled.div`
  display: flex;
  gap:10px;
  align-items: center;
+ @media (max-width: 480px){
+flex-wrap: wrap;
+ }
 `
 export const CopyRight = styled.div`
  display: flex;

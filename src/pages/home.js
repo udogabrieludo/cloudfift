@@ -2,17 +2,17 @@ import React from 'react';
 import Header from '../components/header';
 import Menu from '../components/menu';
 import HeaderContainer from '../container/header-container';
-import JobContainer from '../container/jobs-container';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { responsive } from '../features/slider-responsive';
-import { joblist } from '../features/joblist';
-import Card from '../components/card';
+
 import HowItWorks from '../container/how-it-works-container';
-import CategoryContainer from '../container/category-container';
 import TopJobs from '../components/top-jobs/top-jobs';
 import GetStart from '../components/get-started';
 import Footer from '../components/footer';
+import CategoryList from '../components/category-list';
+import JobCarousel from '../container/jobs-carousel';
+import Testimonial from '../components/testimonial';
 
 
 
@@ -24,24 +24,13 @@ const Home = () => {
       <Menu  />
       <HeaderContainer  />
       </Header>
-     <JobContainer />
-
-      {/* <div>
-      <Carousel responsive={responsive} swipeable={false}
-      partialVisible={true}        
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        ssr={true}>
-        {joblist.map((job, i)=>(
-          <div key={i}>
-            {job.companyName}
-          </div>
-        ))}
-      </Carousel>
-      </div> */}
-     <HowItWorks  />
-     <CategoryContainer />
+    
+      <JobCarousel />
+      <HowItWorks  />
+      <CategoryList />
       <TopJobs />
-      <GetStart />
+       <Testimonial />
+       <GetStart />
        <Footer />
       
     </>

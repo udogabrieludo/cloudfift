@@ -11,12 +11,12 @@ export const responsive = {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 3,
+      items: 2,
       partialVisibilityGutter: 15
     },
-    mobile: {
+    mobile: { 
       breakpoint: { max: 464, min: 0 },
-      items: 2,
+      items: 1,
       partialVisibilityGutter: 15
     }
   };

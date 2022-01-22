@@ -5,6 +5,7 @@ import paystack from '../assets/images/paystack.svg'
 import google from '../assets/images/google.svg'
 import kpmg from '../assets/images/kpmg.svg'
 import Search from '../components/search';
+import FancyCard from '../components/fancy-image-card';
 
 const HeaderContainer = () => {
   return (
@@ -30,12 +31,7 @@ const HeaderContainer = () => {
         </Column>
 
         <Column>
-            <InnerColumn>
-             <LineBox />
-             <ImgBox >
-             <Image src={heroImage}  alt='hero-image' />
-                </ImgBox>
-            </InnerColumn>
+           <FancyCard image={heroImage} />
         </Column>
     </InnerRow>
   </Row>
